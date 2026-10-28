@@ -1,0 +1,93 @@
+/* Etnoxia v13 – webhelyszintű, akadálymentes hozzájáruláskezelő */
+[hidden] {display:none !important}
+.consent-btn {border:1px solid transparent;border-radius:9px;min-height:43px;padding:10px 16px;font-family:var(--site-font);font-weight:650;font-size:14px;line-height:1.3;cursor:pointer;transition:background .15s ease}
+.consent-btn-primary {color:white;background:#0872bd;border-color:#0872bd}
+.consent-btn-primary:hover {background:#046aae}
+.consent-btn-outline {color:#0f4773;background:white;border-color:#91b2ce}
+.consent-btn-outline:hover {background:#f0f8fd}
+/* A jogi és részletes beállítási link a banner közös alsó sorában. */
+.consent-banner {position:fixed;z-index:500;left:20px;right:20px;bottom:18px;max-width:1100px;margin:0 auto;padding:19px 22px 17px;border-radius:14px;background:white;box-shadow:0 12px 46px rgba(8,32,60,.28);border:1px solid #b7cfe2;display:grid;grid-template-columns:minmax(0,1fr) 340px;column-gap:22px;row-gap:8px;align-items:center}
+.consent-banner {max-height:calc(100vh - 36px);max-height:calc(100dvh - 36px);overflow-y:auto;overscroll-behavior:contain}
+.consent-banner-copy {min-width:0;grid-column:1;grid-row:1}
+.consent-banner h2 {font-size:19px;line-height:1.3;margin:0 0 7px;font-weight:700;color:#0d243e}
+.consent-banner p {font-size:13px;line-height:1.55;margin:0 0 8px;color:#435b71}
+.consent-banner-links a,.consent-modal-legal a {font-size:12px;color:#0b67aa;text-underline-offset:3px}
+.consent-banner-actions {display:flex;gap:10px;min-width:0;grid-column:2;grid-row:1}
+.consent-banner-actions .consent-btn {flex:1 1 0;min-width:0}
+.consent-banner-links {grid-column:1/-1;grid-row:2;display:flex;justify-content:space-between;align-items:center;gap:14px;min-width:0}
+.consent-settings-link {position:static;border:0;background:transparent;padding:3px 0;font:500 12px/1.4 var(--site-font);text-decoration:underline;text-underline-offset:3px;color:#0b67aa;cursor:pointer;white-space:nowrap}
+.consent-settings-link:hover {color:#074e88}
+.consent-modal-open {overflow:hidden}
+.consent-modal-backdrop {position:fixed;z-index:600;inset:0;padding:20px;display:flex;justify-content:center;align-items:center;background:rgba(5,23,43,.64)}
+.consent-modal {width:min(620px,100%);max-height:calc(100dvh - 40px);overflow-y:auto;background:white;color:#0d243e;border-radius:16px;padding:23px;box-shadow:0 12px 50px rgba(0,0,0,.25)}
+.consent-modal-head {display:flex;align-items:start;justify-content:space-between;gap:15px}
+.consent-modal h2 {font-size:23px;margin:0 0 12px;line-height:1.25}
+.consent-modal-close {width:34px;min-width:34px;height:34px;padding:0;display:grid;place-items:center;flex:0 0 34px;background:#f1f6fa;border:1px solid #d6e5ef;border-radius:6px;cursor:pointer}
+.consent-modal-close svg {display:block;width:18px;height:18px}
+.consent-modal-intro {font-size:14px;line-height:1.55;color:#4e6377;margin:0 0 16px}
+.consent-option {display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 0;border-top:1px solid #dce8f1}
+.consent-option-copy {display:flex;flex-direction:column;gap:4px}
+.consent-option-copy strong {font-size:14px;font-weight:700}
+.consent-option-copy small {font-size:12px;line-height:1.5;color:#62768a}
+.consent-option input {accent-color:#078acc;width:20px;height:20px;flex:none}
+.consent-option input:disabled {opacity:.65;cursor:not-allowed}
+.consent-modal-legal {margin:12px 0}
+.consent-modal-actions {display:flex;flex-wrap:wrap;gap:9px}
+.consent-modal-actions .consent-btn {flex:1 1 165px}
+.site-footer .cookie-settings-trigger {color:white;background:transparent;border:0;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.site-footer .cookie-settings-trigger:hover {color:#b5eaff}
+.newsletter-consent-placeholder {border:1px solid #dce9f2;border-radius:9px;padding:15px 12px;text-align:center;background:#f8fbfe}
+.newsletter-consent-placeholder p {margin:0 0 10px;color:#50697e;font-size:13px;line-height:1.6}
+.newsletter-settings-button {font:600 12px/1.4 var(--site-font);background:transparent;border:0;color:#096caa;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:4px}
+.newsletter-loading {font-size:13px;line-height:1.5;color:#60758a}
+/* A korábbi, elfogadás után megjelenő külön videóengedély-kártya megszűnt. */
+.video-launch {isolation:isolate;color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:radial-gradient(ellipse at 51% 64%,#164a7c 0%,#0d3155 45%,#07182e 85%)}
+.video-launch::before {pointer-events:none;z-index:-1;opacity:.5}
+.video-launch::after {display:none}
+.video-preview-brand {display:flex;align-items:center;justify-content:center;gap:14px;color:white;text-shadow:0 1px 12px rgba(0,0,0,.15)}
+.video-preview-brand .video-preview-mark {display:block;position:static;inset:auto;object-fit:contain;opacity:1;width:clamp(38px,7vw,66px);height:clamp(38px,7vw,66px)}
+.video-preview-name {font-family:var(--site-font);font-size:clamp(25px,5vw,43px);letter-spacing:-.045em;font-weight:700}
+.video-launch .play-disc {width:66px;height:66px;background:rgba(8,116,194,.72);border-color:rgba(107,208,244,.7);box-shadow:0 0 0 8px rgba(39,159,220,.09),0 7px 24px rgba(2,12,31,.2)}
+.video-launch:hover .play-disc {background:#087dca}
+@media(max-width:850px) {
+ .consent-banner {display:flex;flex-direction:column;align-items:stretch;gap:11px}
+ .consent-banner-actions {flex:0 1 auto;width:100%}
+}
+@media(max-width:480px) {
+ .consent-banner {left:8px;right:8px;bottom:8px;padding:15px;border-radius:12px}
+ .consent-banner h2 {font-size:16px}
+ .consent-banner p {font-size:12px}
+ .consent-banner-actions .consent-btn {font-size:12px;padding:9px 7px;min-height:40px}
+ .consent-banner-links a,.consent-settings-link {font-size:clamp(10px,2.8vw,12px);white-space:nowrap}
+ .consent-modal-backdrop {padding:8px}
+ .consent-modal {max-height:calc(100vh - 16px);padding:17px}
+ .consent-modal h2 {font-size:19px}
+ .consent-modal-actions .consent-btn {flex:1 1 130px}
+ .video-launch {gap:13px}
+ .video-preview-brand {gap:9px}
+ .video-launch .play-disc {width:54px;height:54px}
+}
+@media(prefers-reduced-motion:reduce) {.consent-btn {transition:none}}
+
+/* Döntésig a teljes főoldalt lefedő, mérsékelt sötétítés. A jogi tájékoztató
+   döntés nélkül is olvasható marad. */
+.consent-screen-shade {position:fixed;z-index:490;inset:0;background:rgba(5,19,38,.54)}
+.consent-pending {overflow:hidden}
+/* A választás után a böngésző jobb széléhez tapadó fül, a lábléctől távol. */
+.cookie-shortcut {position:fixed;z-index:350;right:0;top:50%;bottom:auto;transform:translateY(-50%);padding:6px 10px;font:500 11px/1.2 var(--site-font);color:#476580;background:rgba(255,255,255,.94);border:1px solid #cedeea;border-right:0;border-radius:8px 0 0 8px;box-shadow:0 2px 8px rgba(9,36,64,.08);cursor:pointer;opacity:.82}
+.cookie-shortcut:hover,.cookie-shortcut:focus-visible {opacity:1;background:#fff;color:#0a65a7}
+.video-consent-hint {font:500 12px/1.4 var(--site-font);color:#d5e8f6;text-align:center;max-width:90%}
+.newsletter-status {font-size:13px;line-height:1.5;color:#60758a}
+.newsletter-external-link {display:inline-block;font-weight:600;color:#096ca8;text-decoration:underline;text-underline-offset:3px;margin-top:6px}
+@media(max-width:480px) {.cookie-shortcut {font-size:10px}}
+/* v15: bal alsó, láblécet elkerülő, finom újranyitó. A bottom értékét
+   a közös JS a lábléc képernyőn látható határához igazítja. */
+.cookie-shortcut {left:0;right:auto;top:auto;bottom:10px;transform:none;border-left:0;border-right:1px solid #cedeea;border-radius:0 8px 8px 0}
+.consent-storage-warning {position:fixed;z-index:700;left:12px;bottom:56px;max-width:min(400px,calc(100vw - 24px));padding:10px 14px;background:#fff8e8;color:#6a3900;border:1px solid #e4c589;border-radius:8px;box-shadow:0 3px 14px #0014;font:13px/1.5 var(--site-font)}
+
+/* v17: 320 px-es, illetve nagyított mobilnézetben a panel nem lépheti túl a képernyőt. */
+@media(max-width:480px) { .consent-banner {max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px)} .consent-modal {max-height:calc(100dvh - 16px)} }
+
+/* v18: a nem modális adatkezelési banner helyigénye görgethetően fenntartva.
+   A normál oldalelrendezést nem érinti; JS eltávolítja döntés után. */
+body.consent-privacy-banner {padding-bottom:var(--etnoxia-privacy-banner-space, 0px)}

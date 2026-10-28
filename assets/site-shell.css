@@ -1,0 +1,146 @@
+/* Etnoxia v7 – egységes, stabil oldalváz.
+   A három oldal minden fejléc- és láblécstílusa innen származik.
+   Rendszerbetűt használunk: nincs későn érkező Inter vagy betűletöltés. */
+:root {
+  color-scheme: light;
+  --site-font: "Segoe UI", Arial, sans-serif;
+  --ink: #0d243e;
+  --soft: #566f86;
+  --blue: #116bc6;
+  --cyan: #17b8dc;
+  --line: #e1eaf3;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { min-width: 320px; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--site-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+button, input { font: inherit; }
+:focus-visible { outline: 2px solid #128bd5; outline-offset: 3px; }
+
+/* Közös konténer és fejléc. */
+.site-wrap {
+  width: min(1200px, calc(100% - 70px));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--site-font);
+}
+.site-header {
+  height: 116px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  font-family: var(--site-font);
+}
+.site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: #121c2b;
+  text-decoration: none;
+  font-family: var(--site-font);
+  transition: opacity .2s ease;
+}
+.site-header .brand:hover { opacity: .84; }
+.site-header .brand-mark { display: block; width: 55px; height: 55px; flex: none; }
+.site-header .brand-name {
+  font-family: var(--site-font);
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1.8px;
+  font-style: normal;
+  text-transform: none;
+}
+
+/* Közös lábléc: mindhárom oldalon fix 12px, 18px sortáv. */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 23px 12px 25px;
+  background: #0b2443;
+  color: #fff;
+  text-align: center;
+}
+.site-footer, .site-footer * {
+  font-family: var(--site-font);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-style: normal;
+  text-transform: none;
+}
+.site-footer a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.site-footer a:hover, .site-footer a:focus-visible { color: #b5eaff; }
+.site-footer .footer-rule {
+  width: 3px;
+  height: 3px;
+  flex: none;
+  border-radius: 50%;
+  background: #48c5e3;
+}
+
+/* Billentyűzetes navigáció. */
+.skip-link:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skip-link:focus {
+  position: absolute;
+  z-index: 10;
+  top: 12px;
+  left: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  color: #071b33;
+}
+
+@media (max-width: 1050px) {
+  .site-wrap { width: calc(100% - 50px); }
+}
+@media (max-width: 790px) {
+  .site-wrap { width: min(650px, calc(100% - 36px)); }
+  .site-header { height: 96px; }
+  .site-header .brand-mark { width: 49px; height: 49px; }
+  .site-header .brand-name { font-size: 36px; }
+}
+@media (max-width: 450px) {
+  .site-wrap { width: calc(100% - 28px); }
+  .site-header { height: 83px; }
+  .site-header .brand { gap: 10px; }
+  .site-header .brand-mark { width: 41px; height: 41px; }
+  .site-header .brand-name { font-size: 31px; }
+  .site-footer { gap: 9px; padding: 19px 8px 23px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand { transition: none; }
+}

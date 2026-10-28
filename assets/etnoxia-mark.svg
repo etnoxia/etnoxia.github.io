@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Etnoxia jel">
+  <defs>
+    <linearGradient id="top" x1=".05" y1="1" x2="1" y2="0"><stop stop-color="#0452af"/><stop offset=".5" stop-color="#087bdb"/><stop offset="1" stop-color="#0ce4e7"/></linearGradient>
+    <linearGradient id="mid" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#03418f"/><stop offset=".63" stop-color="#087bea"/><stop offset="1" stop-color="#159cf2"/></linearGradient>
+    <linearGradient id="bottom" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#072a55"/><stop offset="1" stop-color="#122740"/></linearGradient>
+  </defs>
+  <path d="M15 37c0-6 3-11 9-15L47 5c4-3 8-4 13-4h51c6 0 8 5 4 10L97 31c-2 3-5 4-9 4H59c-5 0-10 1-14 4L15 61Z" fill="url(#top)"/>
+  <path d="m15 72 32-25c5-4 10-6 16-6h45c4 0 6 3 3 7L93 68c-3 4-5 5-10 5H62c-5 0-10 2-14 5l-33 26Z" fill="url(#mid)"/>
+  <path d="M15 103c0 8 7 15 17 15h81c5 0 6-4 3-8L95 88c-3-4-6-5-11-5H62c-4 0-8-1-12-4L15 104Z" fill="url(#bottom)"/>
+</svg>

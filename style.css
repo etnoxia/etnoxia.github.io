@@ -1,0 +1,465 @@
+/* Etnoxia v7 – oldaltartalom. Fejléc/lábléc/reset: assets/site-shell.css */
+.landing-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 383px;
+  align-items: start;
+  gap: 33px;
+  padding: 44px 0 72px;
+}
+.video-section {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.welcome-copy {
+  padding: 0 2px;
+}
+.eyebrow {
+  margin: 0 0 12px;
+  color: #1379bf;
+  font-size: 12px;
+  letter-spacing: .16em;
+  font-weight: 780;
+}
+.welcome-copy h1 {
+  font-size: clamp(29px,3.1vw,40px);
+  line-height: 1.18;
+  letter-spacing: -.043em;
+  margin: 0 0 14px;
+  font-weight: 790;
+}
+.welcome-copy>p:last-child {
+  color: var(--soft);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 715px;
+  margin: 0;
+}
+.player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 13px;
+  overflow: hidden;
+  background: #091c34;
+  border: 1px solid #d7e5f2;
+  box-shadow: 0 12px 30px rgba(11,49,83,.12);
+}
+.player iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  background: #05162b;
+}
+.player-empty,.video-launch {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: radial-gradient(ellipse at 54% 80%,rgba(13,84,148,.25),transparent 67%),linear-gradient(145deg,#0d2b4e,#07182e 70%,#0b253f);
+}
+.player-empty:before,.video-launch:before {
+  content: "";
+  position: absolute;
+  width: 145%;
+  height: 68%;
+  left: -23%;
+  bottom: -50%;
+  border-radius: 50%;
+  border: 1px solid rgba(22,178,250,.13);
+  box-shadow: 0 0 28px rgba(0,162,238,.07),0 0 0 28px rgba(0,162,238,.017),0 0 0 70px rgba(0,162,238,.022);
+  transform: rotate(-6deg);
+}
+.video-launch {
+  cursor: pointer;
+}
+.video-launch img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .72;
+}
+.video-launch:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5,25,50,.13);
+}
+.play-disc {
+  z-index: 1;
+  width: 75px;
+  height: 75px;
+  display: grid;
+  place-items: center;
+  color: #e7faff;
+  border: 1px solid rgba(90,209,242,.47);
+  background: rgba(11,68,116,.68);
+  border-radius: 50%;
+  box-shadow: 0 0 28px rgba(25,147,232,.15);
+}
+.play-disc svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+  transform: translateX(2px);
+}
+.about-content {
+  background: #f9fbfe;
+  border: 1px solid #e3edf5;
+  border-radius: 13px;
+  padding: 24px 27px 25px;
+}
+.about-content h2 {
+  font-size: 23px;
+  font-weight: 760;
+  letter-spacing: -.035em;
+  margin: 0 0 12px;
+}
+.about-content p {
+  font-size: 15px;
+  line-height: 1.67;
+  color: #4f657a;
+  margin: 0 0 12px;
+}
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+.about-content .upcoming-note {
+  color: #135b93;
+  font-weight: 560;
+}
+.signup-panel {
+  position: relative;
+  align-self: start;
+  overflow: hidden;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #dce9f2;
+  border-radius: 14px;
+  box-shadow: 0 12px 31px rgba(15,65,110,.07);
+}
+.signup-topline {
+  height: 4px;
+  background: linear-gradient(90deg,#0876ce 0%,#1ebfe3 37%,#edf7fc 37%,#edf7fc 100%);
+}
+.newsletter-inner {
+  padding: 24px 21px 24px;
+}
+.mail-icon {
+  display: grid;
+  place-items: center;
+  width: 53px;
+  height: 53px;
+  border: 1px solid #d9edf9;
+  border-radius: 14px;
+  background: #edf8fe;
+  color: #128ad3;
+}
+.mail-icon svg {
+  width: 36px;
+  height: 36px;
+}
+.newsletter-inner h2 {
+  margin: 18px 0 7px;
+  font-size: 26px;
+  letter-spacing: -.04em;
+  font-weight: 790;
+}
+.newsletter-description {
+  font-size: 13px;
+  color: #56748f;
+  margin: 0 0 13px;
+  line-height: 1.45;
+}
+.noscript-notice {
+  color: #a82f20;
+  font-size: 13px;
+}
+/* A MailerLite a valós űrlap. Csak a vizuális burkolatát alakítjuk. */
+.signup-panel .ml-embedded {
+  width: 100%;
+  min-height: 220px;
+}
+.signup-panel .ml-form-embedContainer,.signup-panel .ml-form-embedWrapper.embedForm {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.signup-panel .ml-form-embedContainer .ml-form-embedWrapper {
+  background: #fff !important;
+  border: 0 !important;
+}
+.signup-panel .ml-form-embedWrapper .ml-form-embedBody,.signup-panel .ml-form-embedWrapper .ml-form-successBody {
+  padding: 0 !important;
+}
+.signup-panel .ml-form-embedWrapper .row-form>.ml-form-embedContent {
+  display: none !important;
+}
+.signup-panel .ml-form-embedWrapper .ml-form-formContent {
+  margin-top: 0 !important;
+}
+.signup-panel .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+  border: 1px solid #cedfeb !important;
+  border-radius: 8px !important;
+  background: #fbfdff !important;
+  padding: 12px !important;
+  min-height: 44px !important;
+}
+.signup-panel .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+  background: #0b77b6 !important;
+  border-radius: 8px !important;
+  min-height: 46px !important;
+}
+.signup-panel .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+  background: #087bc0 !important;
+}
+.signup-panel .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description p {
+  line-height: 1.45 !important;
+}
+.signup-panel .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.privacy-policy p a {
+  color: #1266c3 !important;
+}
+.signup-panel .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+  font-size: 22px !important;
+  font-weight: 740 !important;
+  color: #11253c !important;
+}
+.signup-panel .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+}
+/* Adatkezelési oldal */
+.policy-main {
+  flex: 1;
+  width: min(790px,100%);
+  margin: 0 auto;
+  padding: 48px 4px 60px;
+  line-height: 1.69;
+}
+.policy-main h1 {
+  font-size: clamp(25px,3vw,34px);
+  line-height: 1.28;
+  letter-spacing: -.025em;
+  margin: 0 0 15px;
+}
+.policy-main h2 {
+  font-size: 20px;
+  margin: 31px 0 9px;
+  line-height: 1.35;
+}
+.policy-main p,.policy-main ul {
+  margin: 8px 0 16px;
+}
+.policy-main a {
+  color: #1164b6;
+  text-underline-offset: 3px;
+}
+.policy-main .to-top {
+  display: inline-block;
+  margin-top: 18px;
+  text-decoration: none;
+  font-weight: 700;
+}
+/* Köszönőoldal */
+.thankyou-main {
+  flex: 1;
+  min-height: 555px;
+  padding: 70px 16px 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.thankyou-card {
+  width: min(660px,100%);
+  padding: 46px 53px 51px;
+  border: 1px solid #dfebf6;
+  background: #fff;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 16px 42px rgba(13,55,92,.065);
+}
+.thankyou-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  color: #0979c4;
+  background: #eaf8ff;
+  border-radius: 28px;
+  margin-bottom: 23px;
+}
+.thankyou-overline {
+  display: block;
+  color: #4081a8;
+  letter-spacing: .15em;
+  font-size: 12px;
+  font-weight: 750;
+}
+.thankyou-card h1 {
+  font-size: clamp(29px,3.6vw,39px);
+  line-height: 1.16;
+  letter-spacing: -.045em;
+  margin: 16px 0 20px;
+}
+.thankyou-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #5a7188;
+  margin: 0 auto 8px;
+  max-width: 490px;
+}
+.thankyou-card .thankyou-action {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 750;
+  border-radius: 10px;
+  background: linear-gradient(100deg,#1678ce,#087cab);
+  padding: 16px 21px;
+  min-height: 51px;
+  margin-top: 26px;
+  box-shadow: 0 9px 22px rgba(13,116,186,.16);
+}
+.thankyou-card .thankyou-action:hover {
+  background: #0f6eb7;
+}
+.thankyou-note {
+  max-width: 590px;
+  margin: 23px 0 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #8495a7;
+}
+@media (max-width:1050px) {
+  .landing-grid {
+    grid-template-columns: minmax(0,1fr) 358px;
+    gap: 24px;
+  }
+  .newsletter-inner {
+    padding: 22px 16px;
+  }
+}
+@media (max-width:790px) {
+  .landing-grid {
+    grid-template-columns: 1fr;
+    gap: 27px;
+    padding: 32px 0 52px;
+  }
+  .signup-panel {
+    max-width: 600px;
+    width: 100%;
+  }
+  .newsletter-inner {
+    padding: 26px 25px;
+  }
+  .welcome-copy h1 {
+    font-size: 34px;
+  }
+  .policy-main {
+    padding: 32px 6px 52px;
+  }
+  .thankyou-main {
+    min-height: 510px;
+    padding: 50px 0 55px;
+  }
+  .thankyou-card {
+    padding: 38px 31px 42px;
+  }
+}
+@media (max-width:450px) {
+  .landing-grid {
+    padding-top: 24px;
+    gap: 22px;
+  }
+  .video-section {
+    gap: 18px;
+  }
+  .welcome-copy h1 {
+    font-size: 30px;
+  }
+  .welcome-copy>p:last-child {
+    font-size: 14px;
+  }
+  .player {
+    border-radius: 11px;
+  }
+  .play-disc {
+    width: 61px;
+    height: 61px;
+  }
+  .play-disc svg {
+    width: 21px;
+    height: 21px;
+  }
+  .about-content {
+    padding: 20px 19px;
+  }
+  .about-content h2 {
+    font-size: 21px;
+  }
+  .about-content p {
+    font-size: 14px;
+  }
+  .newsletter-inner {
+    padding: 22px 15px;
+  }
+  .mail-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .newsletter-inner h2 {
+    font-size: 24px;
+  }
+  .thankyou-main {
+    min-height: 470px;
+    padding: 35px 0 40px;
+  }
+  .thankyou-card {
+    padding: 31px 20px 35px;
+    border-radius: 13px;
+  }
+  .thankyou-symbol {
+    width: 75px;
+    height: 75px;
+    border-radius: 21px;
+  }
+  .thankyou-card h1 {
+    font-size: 29px;
+  }
+  .thankyou-card p {
+    font-size: 14px;
+  }
+  .thankyou-card .thankyou-action {
+    font-size: 13px;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  *,*:before,*:after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.privacy-inline-button { border:0; padding:0; font:inherit; color:#1164b6; text-decoration:underline; text-underline-offset:3px; background:none; cursor:pointer; }
+
+/* v16: JavaScript nélküli, valóban kattintható videóhelyettesítő. */
+.nojs-video-link {position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#fff;background:radial-gradient(ellipse at 50% 70%,#164a7c,#07182e 86%);font-size:clamp(15px,2vw,20px);font-weight:650;line-height:1.5;text-decoration:underline;text-underline-offset:4px}
+.nojs-video-link:hover,.nojs-video-link:focus-visible {background:linear-gradient(135deg,#0d4b86,#061b34);color:#fff}
+.nojs-newsletter .newsletter-external-link {font-size:13px;margin-top:0}
