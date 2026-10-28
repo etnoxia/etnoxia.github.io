@@ -134,7 +134,7 @@
     if (state?.youtube && id) {
       if (videoIframe?.isConnected) return;
       const iframe = document.createElement("iframe");
-      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?rel=0&controls=0`;
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?rel=0&controls=1`;
       iframe.title = vid.title || "Etnoxia videó";
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
       iframe.referrerPolicy = "strict-origin-when-cross-origin";
