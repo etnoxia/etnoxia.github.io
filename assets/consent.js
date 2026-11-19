@@ -29,10 +29,33 @@
   const GOOGLE_TAG_ID = "GTM-N22TS32N";
   let analyticsLoaded = false;
 
+  /*
+   * Google Consent Mode v2 – Basic implementation.
+   * A Google tag csak statisztikai hozzájárulás után töltődik be.
+   * A hozzájárulási állapot addig kizárólag a helyi dataLayer-ben várakozik,
+   * így elutasítás vagy döntés hiányában nem indul kérés a Google felé.
+   */
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+  window.gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied"
+  });
+
+  function setGoogleConsent(analyticsGranted) {
+    window.gtag("consent", "update", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: analyticsGranted ? "granted" : "denied"
+    });
+  }
+
   function loadAnalytics() {
     if (analyticsLoaded || !state?.analytics) return;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+    setGoogleConsent(true);
     window.gtag("js", new Date());
     const script = document.createElement("script");
     script.async = true;
@@ -47,6 +70,7 @@
       loadAnalytics();
       return false;
     }
+    setGoogleConsent(false);
     if (previousAnalytics && analyticsLoaded) {
       window.location.reload();
       return true;
