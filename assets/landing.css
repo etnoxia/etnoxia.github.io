@@ -1,0 +1,282 @@
+/* Csak a landing főoldal kiegészítései. A közös oldalváz és a consent változatlan. */
+.landing-page #hirlevel,
+.landing-page #elso-kurzus,
+.landing-page #tanulasi-iranyok { scroll-margin-top: 24px; }
+.landing-page .lp-section { grid-column: 1 / -1; min-width: 0; }
+.landing-page .lp-section-head { max-width: 100%; margin-bottom: 25px; }
+.landing-page .lp-section h2 {
+  margin: 0 0 13px;
+  font-size: clamp(25px, 2.6vw, 32px);
+  line-height: 1.2;
+  font-weight: 760;
+  letter-spacing: -.035em;
+}
+
+.landing-page .lp-section h3 { margin: 0 0 12px; font-size: 19px; line-height: 1.3; letter-spacing: -.015em; }
+.landing-page .lp-section p { margin: 0 0 14px; color: #4f657a; font-size: 15px; line-height: 1.67; }
+.landing-page .lp-section p:last-child { margin-bottom: 0; }
+.landing-page .lp-section .eyebrow { font-size: 12px; color: #0964a7; line-height: 1.5; }
+.landing-page .lp-text-link { color: #135b93; font-size: 14px; line-height: 1.55; font-weight: 650; text-underline-offset: 3px; }
+.landing-page .lp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 21px;
+  border: 1px solid #0964a7;
+  border-radius: 9px;
+  background: #0964a7;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.45;
+  text-align: center;
+  text-decoration: none;
+}
+.landing-page .lp-button:hover { background: #084f86; border-color: #084f86; }
+.landing-page .lp-newsletter-note { margin: 16px 0 0; color: #56748f; font-size: 12px; line-height: 1.6; }
+.landing-page .lp-standalone-signup { display: block; margin-top: 12px; color: #135b93; font-size: 13px; font-weight: 600; text-underline-offset: 3px; }
+.landing-page .lp-audiences { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
+.landing-page .lp-audiences > article { grid-column: span 2; }
+.landing-page .lp-audiences > article:nth-child(n+4) { grid-column: span 3; }
+.landing-page .lp-card { padding: 24px; border: 1px solid #dce9f2; border-radius: 13px; background: #fff; }
+.landing-page .lp-audiences .lp-card { display: flex; flex-direction: column; align-items: start; }
+.landing-page .lp-audiences .lp-text-link { margin-top: auto; }
+.landing-page .lp-directions .lp-card { display: flex; flex-direction: column; }
+.landing-page .lp-direction-image { display: block; width: 100%; height: auto; margin: 0 0 18px; border-radius: 10px; }
+.landing-page .lp-course { padding: 32px; background: #f1f8fd; border: 1px solid #d5e7f4; border-radius: 14px; }
+.landing-page .lp-course .lp-status { display: inline-block; margin-bottom: 17px; padding: 5px 10px; background: #dceefb; color: #145880; border-radius: 5px; font-size: 11px; font-weight: 750; letter-spacing: .07em; }
+.landing-page .lp-course .lp-course-subtitle { font-size: 20px; color: #135b93; font-weight: 600; }
+.landing-page .lp-course-facts { display: flex; flex-wrap: wrap; gap: 9px; padding: 0; margin: 0 0 30px; list-style: none; }
+.landing-page .lp-course-facts li { padding: 6px 11px; border: 1px solid #c5dded; border-radius: 6px; background: #fff; color: #345c7a; font-size: 13px; }
+.landing-page .lp-outputs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 23px; margin: 22px 0 26px; }
+.landing-page .lp-index { display: block; color: #0964a7; font-size: 13px; font-weight: 750; letter-spacing: .06em; margin-bottom: 9px; }
+.landing-page .lp-outputs h4 { margin: 0 0 10px; font-size: 18px; line-height: 1.35; letter-spacing: -.015em; }
+.landing-page .lp-outputs p { font-size: 14px; }
+.landing-page .lp-output-heading { padding-top: 21px; border-top: 1px solid #d5e7f4; }
+.landing-page .lp-course-fit { padding-top: 21px; border-top: 1px solid #d5e7f4; }
+.landing-page .lp-details { margin-top: 12px; border: 1px solid #dce9f2; border-radius: 10px; background: #fff; }
+.landing-page .lp-details summary { padding: 17px 20px; cursor: pointer; font-size: 15px; font-weight: 650; line-height: 1.5; }
+.landing-page .lp-details summary::marker { color: #0964a7; }
+.landing-page .lp-details[open] summary { border-bottom: 1px solid #e1eaf3; }
+.landing-page .lp-details > p { margin: 17px 20px; }
+.landing-page .lp-details > p:last-child { margin-bottom: 20px; }
+.landing-page .lp-details ol { margin: 20px; padding-left: 25px; color: #4f657a; font-size: 14px; line-height: 1.65; }
+.landing-page .lp-details li + li { margin-top: 9px; }
+.landing-page .lp-course-action { margin-top: 24px; }
+.landing-page .lp-course-action p { margin-top: 9px; font-size: 13px; }
+.landing-page .lp-method,
+.landing-page .lp-directions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.landing-page .lp-method article { border-left: 2px solid #c5e4f8; padding-left: 19px; }
+.landing-page .lp-section .lp-principle { margin-top: 26px; padding: 18px 22px; border-radius: 10px; background: #f1f8fd; color: #235270; }
+.landing-page .lp-example { margin-top: 26px; padding: 26px; border: 1px solid #dce9f2; border-radius: 13px; }
+.landing-page .lp-example > div { max-width: 100%; }
+.landing-page .lp-final-cta { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 30px; border: 1px solid #d5e7f4; border-radius: 14px; background: #f1f8fd; }
+.landing-page .lp-final-cta > div { max-width: 670px; }
+.landing-page .lp-final-cta .lp-button { flex-shrink: 0; }
+@media (max-width: 1000px) {
+  .landing-page .lp-audiences { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .landing-page .lp-audiences > article,
+  .landing-page .lp-audiences > article:nth-child(n+4) { grid-column: auto; }
+  .landing-page .lp-audiences > article:last-child { grid-column: 1 / -1; }
+  .landing-page .lp-outputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .landing-page .lp-final-cta { align-items: start; flex-direction: column; gap: 20px; }
+}
+@media (max-width: 790px) {
+  .landing-page .lp-method,
+  .landing-page .lp-directions { grid-template-columns: minmax(0, 1fr); }
+  .landing-page .lp-course { padding: 25px; }
+  .landing-page .lp-section-head { margin-bottom: 21px; }
+}
+@media (max-width: 600px) {
+  .landing-page .lp-audiences { grid-template-columns: minmax(0, 1fr); }
+  .landing-page .lp-card { padding: 21px; }
+}
+@media (max-width: 450px) {
+  .landing-page .lp-course,
+  .landing-page .lp-example,
+  .landing-page .lp-final-cta { padding: 22px 19px; }
+  .landing-page .lp-outputs { grid-template-columns: minmax(0, 1fr); gap: 23px; }
+  .landing-page .lp-section p { font-size: 14px; }
+  .landing-page .lp-section .eyebrow { font-size: 11px; }
+  .landing-page .lp-section h2 { font-size: 25px; }
+  .landing-page .lp-section h3 { font-size: 19px; }
+  .landing-page .lp-details summary { padding: 16px; font-size: 14px; }
+  .landing-page .lp-details > p { margin-left: 16px; margin-right: 16px; }
+  .landing-page .lp-details ol { margin-left: 14px; margin-right: 14px; }
+  .landing-page .lp-course .lp-course-subtitle { font-size: 18px; }
+  .landing-page .lp-section .lp-principle { padding: 17px; }
+  .landing-page .lp-button { width: 100%; font-size: 14px; }
+}
+
+/* v19.1: elkülönülő tartalmi fejezetek, változatlan felső rész és hírlevél. */
+.landing-page .lp-chapters { grid-column: 1 / -1; min-width: 0; }
+.landing-page .lp-chapter {
+  position: relative;
+  isolation: isolate;
+  padding: 64px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.landing-page .lp-chapter::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 calc(50% - 50vw);
+  background: #fff;
+  border-top: 1px solid #dce9f2;
+}
+.landing-page .lp-chapter:first-child::before { border-top: 1px solid #c8dff1; }
+.landing-page .lp-band::before { background: #f2f7fc; }
+.landing-page .lp-chapter .lp-section-head { margin-bottom: 32px; max-width: 100%; }
+.landing-page .lp-chapter h2 { font-size: clamp(27px, 3vw, 36px); }
+.landing-page .lp-chapter .eyebrow,
+.landing-page .lp-chapter .lp-status {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 0 0 18px;
+  padding: 0;
+  color: #0964a7;
+  background: transparent;
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: .12em;
+}
+.landing-page .lp-card,
+.landing-page .lp-outputs article,
+.landing-page .lp-method article {
+  border-color: #c8dff1;
+  box-shadow: 0 5px 16px rgba(14, 66, 110, .045);
+}
+.landing-page .lp-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 39px;
+  height: 39px;
+  padding: 0 7px;
+  margin-bottom: 18px;
+  border-radius: 9px;
+  background: #eaf4fc;
+  color: #0964a7;
+}
+.landing-page .lp-outputs { gap: 16px; }
+.landing-page .lp-outputs article {
+  min-width: 0;
+  padding: 23px 20px;
+  border: 1px solid #c8dff1;
+  border-radius: 13px;
+  background: #fff;
+}
+.landing-page .lp-method article {
+  padding: 25px;
+  border: 1px solid #c8dff1;
+  border-radius: 13px;
+  background: #fff;
+}
+.landing-page .lp-example { margin-top: 32px; background: #f7fafe; border-left: 3px solid #0964a7; }
+.landing-page .founder-intro.lp-chapter { align-items: center; gap: 48px; }
+.landing-page .lp-resources-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.landing-page .lp-resources .lp-resource-note { margin-top: 22px; max-width: 100%; font-size: 14px; }
+.landing-page #tanulasi-feltetelek { scroll-margin-top: 0; }
+.landing-page .lp-faq .lp-details { margin-top: 14px; }
+.landing-page .lp-band-cta::before { background: #0b365f; border-color: #0b365f; }
+.landing-page .lp-band-cta h2 { color: #fff; }
+.landing-page .lp-band-cta p,
+.landing-page .lp-band-cta .eyebrow { color: #d9eaf8; }
+.landing-page .lp-band-cta .lp-button { background: #fff; color: #0f4773; border-color: #91b2ce; }
+.landing-page .lp-band-cta .lp-button:hover { background: #f0f8fd; border-color: #91b2ce; }
+@media (max-width: 1000px) {
+  .landing-page .lp-outputs { gap: 18px; }
+  .landing-page .lp-resources-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+}
+@media (max-width: 790px) {
+  .landing-page .lp-chapter { padding: 46px 0; }
+  .landing-page .lp-chapter .lp-section-head { margin-bottom: 26px; }
+  .landing-page .founder-intro.lp-chapter { gap: 28px; }
+  .landing-page .lp-resources-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+}
+@media (max-width: 450px) {
+  .landing-page .lp-chapter { padding: 38px 0; }
+  .landing-page .lp-chapter h2 { font-size: 27px; }
+  .landing-page .lp-chapter .eyebrow,
+  .landing-page .lp-chapter .lp-status { font-size: 10px; gap: 11px; letter-spacing: .09em; }
+  .landing-page .lp-method article { padding: 21px; }
+  .landing-page .lp-outputs article { padding: 21px; }
+}
+
+/* A záró feliratkozási sáv közvetlenül a lábléchez csatlakozik. */
+.landing-page .landing-grid { padding-bottom: 0; }
+
+/* v19.3: a plusz tér a hírlevél utáni elválasztó elé kerül. */
+.landing-page .lp-chapters { margin-top: 24px; }
+.landing-page .lp-final-cta { padding-bottom: 88px; }
+@media (max-width: 790px) {
+  .landing-page .lp-chapters { margin-top: 16px; }
+  .landing-page .lp-final-cta { padding-bottom: 96px; }
+}
+
+/* v19.6: egységes képmagasság; az esetleges többlet alulról vágódik. */
+.landing-page .lp-audiences .lp-audience-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 225px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 9px;
+  margin: 0 0 18px;
+}
+
+
+/* v19.9: a módszertani kártyák képei a rendelkezésre álló szélességhez igazodnak, fix magassággal és középre fókuszált vágással. */
+.landing-page .lp-method .lp-method-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 225px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 9px;
+  margin: 0 0 18px;
+}
+
+/* v19.15: az eredményképek teljes képe látszik, a magasság a szélességgel arányosan változik. */
+.landing-page .lp-outputs .lp-outcome-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9px;
+  margin: 0 0 18px;
+}
+
+
+/* v19.18: a tananyag és eszközök kártyákban bal oldali képek jelennek meg. */
+.landing-page .lp-resources .lp-resource-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+.landing-page .lp-resources .lp-resource-image {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.landing-page .lp-resources .lp-resource-copy { min-width: 0; }
+.landing-page .lp-resources .lp-resource-copy h3 { margin-top: 0; }
+@media (max-width: 600px) {
+  .landing-page .lp-resources .lp-resource-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .landing-page .lp-resources .lp-resource-image {
+    width: 150px;
+    height: 150px;
+  }
+}

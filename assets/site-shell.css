@@ -1,0 +1,278 @@
+/* Etnoxia v7 – egységes, stabil oldalváz.
+   A három oldal minden fejléc- és láblécstílusa innen származik.
+   Rendszerbetűt használunk: nincs későn érkező Inter vagy betűletöltés. */
+:root {
+  color-scheme: light;
+  --site-font: "Segoe UI", Arial, sans-serif;
+  --ink: #0d243e;
+  --soft: #566f86;
+  --blue: #116bc6;
+  --cyan: #17b8dc;
+  --line: #e1eaf3;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { min-width: 320px; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--site-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+a, button, summary { -webkit-tap-highlight-color: transparent; }
+button, input { font: inherit; }
+:focus-visible { outline: 2px solid #128bd5; outline-offset: 3px; }
+
+/* Közös konténer és fejléc. */
+.site-wrap {
+  width: min(1200px, calc(100% - 70px));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--site-font);
+}
+.site-header {
+  height: 116px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  font-family: var(--site-font);
+}
+.site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: #121c2b;
+  text-decoration: none;
+  font-family: var(--site-font);
+  transition: opacity .2s ease;
+}
+.site-header .brand:hover { opacity: .84; }
+.site-header .brand-mark { display: block; width: 55px; height: 55px; flex: none; }
+.site-header .brand-name {
+  font-family: var(--site-font);
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1.8px;
+  font-style: normal;
+  text-transform: none;
+}
+
+.header-socials {
+  margin-left: auto;
+  align-self: flex-end;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.header-social-link {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border: 1px solid #d6e3ef;
+  border-radius: 50%;
+  background: #fff;
+  text-decoration: none;
+  transition:
+    transform .16s ease,
+    border-color .16s ease,
+    background .16s ease,
+    box-shadow .16s ease;
+}
+.header-social-link img {
+  width: 21px;
+  height: 21px;
+  display: block;
+}
+.header-social-link:hover {
+  transform: translateY(-1px);
+  border-color: #a9cce6;
+  background: #f5fbff;
+  box-shadow: 0 5px 14px rgba(13, 70, 120, .10);
+}
+.header-social-link:focus-visible {
+  outline: 2px solid #128bd5;
+  outline-offset: 3px;
+}
+
+/* Közös lábléc: mindhárom oldalon fix 12px, 18px sortáv. */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 23px 12px 25px;
+  background: #0b2443;
+  color: #fff;
+  text-align: center;
+}
+.site-footer, .site-footer * {
+  font-family: var(--site-font);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-style: normal;
+  text-transform: none;
+}
+.site-footer a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.site-footer a:hover, .site-footer a:focus-visible { color: #b5eaff; }
+.site-footer .footer-rule {
+  width: 3px;
+  height: 3px;
+  flex: none;
+  border-radius: 50%;
+  background: #48c5e3;
+}
+
+/* Billentyűzetes navigáció. */
+.skip-link:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skip-link:focus {
+  position: absolute;
+  z-index: 10;
+  top: 12px;
+  left: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  color: #071b33;
+}
+
+@media (max-width: 1050px) {
+  .site-wrap { width: calc(100% - 50px); }
+}
+@media (max-width: 790px) {
+  .site-wrap { width: min(650px, calc(100% - 36px)); }
+  .site-header { height: 96px; }
+  .site-header .brand-mark { width: 49px; height: 49px; }
+  .site-header .brand-name { font-size: 36px; }
+  .header-socials { margin-bottom: 12px; gap: 7px; }
+  .header-social-link { width: 37px; height: 37px; }
+  .header-social-link img { width: 20px; height: 20px; }
+}
+@media (max-width: 450px) {
+  .site-wrap { width: calc(100% - 28px); }
+  .site-header { height: 83px; }
+  .site-header .brand { gap: 10px; }
+  .site-header .brand-mark { width: 41px; height: 41px; }
+  .site-header .brand-name { font-size: 31px; }
+  .header-socials { margin-bottom: 10px; gap: 6px; }
+  .header-social-link { width: 34px; height: 34px; }
+  .header-social-link img { width: 18px; height: 18px; }
+  .site-footer { gap: 9px; padding: 19px 8px 23px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand,
+  .header-social-link { transition: none; }
+}
+
+/* v19.2: teljes szélességű fejlécvonal és láblécháttér.
+   A tartalom továbbra is az eredeti, középre zárt konténerben marad. */
+.site-header { position: relative; }
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset: auto calc(50% - 50vw) -1px;
+  height: 1px;
+  background: var(--line);
+  pointer-events: none;
+}
+.site-footer { position: relative; isolation: isolate; }
+.site-footer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: calc(50% - 50vw);
+  left: calc(50% - 50vw);
+  bottom: calc(-1 * var(--etnoxia-privacy-banner-space, 0px));
+  background: #0b2443;
+  pointer-events: none;
+}
+/* Rövid lezáró térköz a belső oldalakon, túlméretezett üres sáv nélkül. */
+.site-wrap .policy-main,
+.site-wrap .thankyou-main { padding-bottom: 24px; }
+
+/* Az adatkezelés a főoldal közös tartalmi konténerét követi. */
+.site-wrap .policy-main { width: 100%; padding-left: 0; padding-right: 0; }
+
+/* Vissza az oldal tetejére – a gergelyhajdu.hu megoldásával egyező megjelenés. */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 24;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(11, 99, 243, 0.24);
+  border-radius: 50%;
+  background: #0b63f3;
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(6, 72, 191, 0.25);
+  font: 400 27px/1 "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition:
+    opacity 0.18s ease,
+    visibility 0.18s ease,
+    transform 0.18s ease,
+    background 0.18s ease;
+}
+
+.back-to-top:hover {
+  background: #0648bf;
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid #a8cbff;
+  outline-offset: 3px;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+  }
+}

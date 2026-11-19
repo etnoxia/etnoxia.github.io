@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex,follow">
+  <title>Az oldal nem található | Etnoxia</title>
+  <meta name="description" content="A keresett Etnoxia-oldal nem található. Visszatérhetsz a főoldalra.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwNzE4MmYiLz48cGF0aCBmaWxsPSIjMTNjZmVhIiBkPSJtMTIgMjIgMTMtMTFoMjhsLTkgMTJIMzFMMTIgMzh6Ii8+PHBhdGggZmlsbD0iIzA4N2JlNCIgZD0ibTEyIDM5IDE4LTE0aDIzTDQyIDM4SDMwTDEyIDUzeiIvPjxwYXRoIGZpbGw9IiMxODNkNmEiIGQ9Ik0xMiA1MmgyNmwxNCA4SDIzYy03IDAtMTEtMy0xMS04eiIvPjwvc3ZnPgo=">
+  <link rel="stylesheet" href="./assets/consent.css?v=19.73">
+  <script src="./assets/consent-state.js?v=19.67"></script>
+  <script defer src="./assets/consent.js?v=19.87"></script>
+  <style>
+/* Etnoxia v7 – egységes, stabil oldalváz.
+   A három oldal minden fejléc- és láblécstílusa innen származik.
+   Rendszerbetűt használunk: nincs későn érkező Inter vagy betűletöltés. */
+:root {
+  color-scheme: light;
+  --site-font: "Segoe UI", Arial, sans-serif;
+  --ink: #0d243e;
+  --soft: #566f86;
+  --blue: #116bc6;
+  --cyan: #17b8dc;
+  --line: #e1eaf3;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { min-width: 320px; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--site-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+a, button, summary { -webkit-tap-highlight-color: transparent; }
+button, input { font: inherit; }
+:focus-visible { outline: 2px solid #128bd5; outline-offset: 3px; }
+
+/* Közös konténer és fejléc. */
+.site-wrap {
+  width: min(1200px, calc(100% - 70px));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--site-font);
+}
+.site-header {
+  height: 116px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  font-family: var(--site-font);
+}
+.site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: #121c2b;
+  text-decoration: none;
+  font-family: var(--site-font);
+  transition: opacity .2s ease;
+}
+.site-header .brand:hover { opacity: .84; }
+.site-header .brand-mark { display: block; width: 55px; height: 55px; flex: none; }
+.site-header .brand-name {
+  font-family: var(--site-font);
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1.8px;
+  font-style: normal;
+  text-transform: none;
+}
+
+.header-socials {
+  margin-left: auto;
+  align-self: flex-end;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.header-social-link {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border: 1px solid #d6e3ef;
+  border-radius: 50%;
+  background: #fff;
+  text-decoration: none;
+  transition: transform .16s ease, border-color .16s ease, background .16s ease, box-shadow .16s ease;
+}
+.header-social-link img { width: 21px; height: 21px; display: block; }
+.header-social-link:hover {
+  transform: translateY(-1px);
+  border-color: #a9cce6;
+  background: #f5fbff;
+  box-shadow: 0 5px 14px rgba(13, 70, 120, .10);
+}
+.header-social-link:focus-visible { outline: 2px solid #128bd5; outline-offset: 3px; }
+
+/* Közös lábléc: mindhárom oldalon fix 12px, 18px sortáv. */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 23px 12px 25px;
+  background: #0b2443;
+  color: #fff;
+  text-align: center;
+}
+.site-footer, .site-footer * {
+  font-family: var(--site-font);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-style: normal;
+  text-transform: none;
+}
+.site-footer a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.site-footer a:hover, .site-footer a:focus-visible { color: #b5eaff; }
+.site-footer .footer-rule {
+  width: 3px;
+  height: 3px;
+  flex: none;
+  border-radius: 50%;
+  background: #48c5e3;
+}
+
+/* Billentyűzetes navigáció. */
+.skip-link:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skip-link:focus {
+  position: absolute;
+  z-index: 10;
+  top: 12px;
+  left: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  color: #071b33;
+}
+
+@media (max-width: 1050px) {
+  .site-wrap { width: calc(100% - 50px); }
+}
+@media (max-width: 790px) {
+  .site-wrap { width: min(650px, calc(100% - 36px)); }
+  .site-header { height: 96px; }
+  .site-header .brand-mark { width: 49px; height: 49px; }
+  .site-header .brand-name { font-size: 36px; }
+  .header-socials { margin-bottom: 12px; gap: 7px; }
+  .header-social-link { width: 37px; height: 37px; }
+  .header-social-link img { width: 20px; height: 20px; }
+}
+@media (max-width: 450px) {
+  .site-wrap { width: calc(100% - 28px); }
+  .site-header { height: 83px; }
+  .site-header .brand { gap: 10px; }
+  .site-header .brand-mark { width: 41px; height: 41px; }
+  .site-header .brand-name { font-size: 31px; }
+  .header-socials { margin-bottom: 10px; gap: 6px; }
+  .header-social-link { width: 34px; height: 34px; }
+  .header-social-link img { width: 18px; height: 18px; }
+  .site-footer { gap: 9px; padding: 19px 8px 23px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand, .header-social-link { transition: none; }
+}
+
+/* v19.2: teljes szélességű fejlécvonal és láblécháttér.
+   A tartalom továbbra is az eredeti, középre zárt konténerben marad. */
+.site-header { position: relative; }
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset: auto calc(50% - 50vw) -1px;
+  height: 1px;
+  background: var(--line);
+  pointer-events: none;
+}
+.site-footer { position: relative; isolation: isolate; }
+.site-footer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: calc(50% - 50vw);
+  left: calc(50% - 50vw);
+  bottom: calc(-1 * var(--etnoxia-privacy-banner-space, 0px));
+  background: #0b2443;
+  pointer-events: none;
+}
+/* Rövid lezáró térköz a belső oldalakon, túlméretezett üres sáv nélkül. */
+.site-wrap .policy-main,
+.site-wrap .thankyou-main { padding-bottom: 24px; }
+
+/* Az adatkezelés a főoldal közös tartalmi konténerét követi. */
+.site-wrap .policy-main { width: 100%; padding-left: 0; padding-right: 0; }
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 24;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(11, 99, 243, 0.24);
+  border-radius: 50%;
+  background: #0b63f3;
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(6, 72, 191, 0.25);
+  font: 400 27px/1 "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity .18s ease, visibility .18s ease, transform .18s ease, background .18s ease;
+}
+.back-to-top:hover { background: #0648bf; }
+.back-to-top:focus-visible { outline: 3px solid #a8cbff; outline-offset: 3px; }
+.back-to-top.is-visible { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+@media (max-width: 640px) {
+  .back-to-top { right: 14px; bottom: 14px; width: 44px; height: 44px; font-size: 24px; }
+}
+
+    .not-found {flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 16px 90px}
+    .not-found h1 {font-size:clamp(28px,5vw,40px);letter-spacing:-.035em;margin:0 0 16px}
+    .not-found p {color:#566f86;max-width:560px;line-height:1.7;margin:0 0 26px}
+    .not-found a.return-home {display:inline-flex;align-items:center;justify-content:center;border-radius:9px;padding:12px 23px;background:#0872bd;color:#fff;text-decoration:none;font-weight:700}
+    .not-found a.return-home:hover {background:#046aae}
+    .not-found .not-found-links {display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+    .not-found .cookie-settings-link {display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border:1px solid #bdd5e6;border-radius:9px;color:#135b93;background:#fff;text-decoration:none;font-weight:650}
+    .not-found .cookie-settings-link:hover {background:#f1f8fd}
+    .site-header .brand-mark svg {display:block;width:100%;height:100%}
+    @media (max-width:450px) {
+      .not-found {padding:52px 8px 68px}
+      .not-found .not-found-links {width:100%;flex-direction:column}
+      .not-found .not-found-links a, .not-found .not-found-links button {width:100%}
+    }
+  </style>
+</head>
+<body data-etnoxia-consent="modal-only">
+  <a href="#main" class="skip-link">Ugrás a tartalomra</a>
+  <div class="site-wrap">
+    <header class="site-header"><a class="brand" data-local-href="./index.html" href="/" aria-label="Etnoxia – főoldal"><span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="top" x1=".05" y1="1" x2="1" y2="0"><stop stop-color="#0452af"/><stop offset=".5" stop-color="#087bdb"/><stop offset="1" stop-color="#0ce4e7"/></linearGradient>
+    <linearGradient id="mid" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#03418f"/><stop offset=".63" stop-color="#087bea"/><stop offset="1" stop-color="#159cf2"/></linearGradient>
+    <linearGradient id="bottom" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#072a55"/><stop offset="1" stop-color="#122740"/></linearGradient>
+  </defs>
+  <path d="M15 37c0-6 3-11 9-15L47 5c4-3 8-4 13-4h51c6 0 8 5 4 10L97 31c-2 3-5 4-9 4H59c-5 0-10 1-14 4L15 61Z" fill="url(#top)"/>
+  <path d="m15 72 32-25c5-4 10-6 16-6h45c4 0 6 3 3 7L93 68c-3 4-5 5-10 5H62c-5 0-10 2-14 5l-33 26Z" fill="url(#mid)"/>
+  <path d="M15 103c0 8 7 15 17 15h81c5 0 6-4 3-8L95 88c-3-4-6-5-11-5H62c-4 0-8-1-12-4L15 104Z" fill="url(#bottom)"/>
+</svg>
+</span><span class="brand-name">Etnoxia</span></a>
+      <nav class="header-socials" aria-label="Etnoxia közösségi oldalak">
+        <a class="header-social-link" href="https://www.linkedin.com/company/etnoxia" target="_blank" rel="noopener noreferrer" aria-label="Etnoxia a LinkedInen"><img src="./assets/linkedin.svg" alt="" width="21" height="21"></a>
+        <a class="header-social-link" href="https://www.facebook.com/etnoxia" target="_blank" rel="noopener noreferrer" aria-label="Etnoxia a Facebookon"><img src="./assets/facebook.svg" alt="" width="21" height="21"></a>
+        <a class="header-social-link" href="https://www.instagram.com/etnoxia.hu/" target="_blank" rel="noopener noreferrer" aria-label="Etnoxia az Instagramon"><img src="./assets/instagram.svg" alt="" width="21" height="21"></a>
+      </nav>
+    </header>
+    <main id="main" class="not-found">
+      <h1>Az oldal nem található</h1>
+      <p>A keresett oldal nem érhető el, vagy megváltozott a címe.</p>
+      <div class="not-found-links">
+        <a class="return-home" data-local-href="./index.html" href="/">Vissza az Etnoxia főoldalára</a>
+        <button class="cookie-settings-link" type="button" data-cookie-settings>Sütibeállítások módosítása</button>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <span>© 2026 Etnoxia</span><span class="footer-rule" aria-hidden="true"></span>
+      <a data-local-href="./adatkezeles.html" href="/adatkezeles.html">Adatkezelési tájékoztató</a><span class="footer-rule" aria-hidden="true"></span>
+      <span>Fejlesztette: <a href="https://gergelyhajdu.hu/" target="_blank" rel="noopener noreferrer">Hajdu Gergely</a></span>
+    </footer>
+    <button aria-label="Vissza az oldal tetejére" class="back-to-top" data-back-to-top type="button">↑</button>
+  </div>
+  <script>
+    if (window.location.protocol === "file:") {
+      document.querySelectorAll("[data-local-href]").forEach(function (link) {
+        link.setAttribute("href", link.getAttribute("data-local-href"));
+      });
+    }
+
+    const backToTopButton = document.querySelector("[data-back-to-top]");
+    if (backToTopButton) {
+      const toggleBackToTop = function () {
+        backToTopButton.classList.toggle("is-visible", window.scrollY > 320);
+      };
+      window.addEventListener("scroll", toggleBackToTop, { passive: true });
+      toggleBackToTop();
+      backToTopButton.addEventListener("click", function () {
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+      });
+    }
+  </script>
+</body>
+</html>
